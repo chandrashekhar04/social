@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#wrapper{
+    height: 100vh;
+    background-color: rgb(7, 63, 101);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 60vh;
+    width: 40vw;
+    background-color: rgb(114, 175, 216);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box .content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .content i{
+    font-size: 3rem;
+    padding: 0.4rem;
+    border: 3px solid rgb(7, 63, 101);
+    border-radius: 1rem;
+    background-color: rgb(7, 63, 101);
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.box input{
+    height: 114.8px;
+    width: 90.8px;
+    z-index: 6;
+    opacity: 0;
+}
+.box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.box .content .mainicon i{
+    font-size: 6rem;
+    transition-property: background-color color;
+    transition-duration: 1s;
+}
+
+
+.box .content .mainicon{
+    position: absolute;
+    z-index: 5;
+}
+
+.box input:checked + .content .mainicon i{
+    background-color: white;
+    color: rgb(7, 63, 101);
+}
+
+
+.box .content .icon1{
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    transition-property: top left;
+    transition-duration: 1s;
+}
+
+
+.box input:checked + .content .icon1{
+    top: 12rem;
+    left: 17rem;
+}
+
+
+.box .content .icon2{
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    transition-property: top right;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+}
+
+.box input:checked + .content .icon2{
+    top: 12rem;
+    right: 17rem;
+}
+
+.box .content .icon3{
+    position: absolute;
+    bottom: 1rem;
+    left: 3rem;
+    transition-property: bottom left;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+}
+
+.box input:checked + .content .icon3{
+    bottom: 12rem;
+    left: 17rem;
+}
+
+
+.box .content .icon4{
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+    transition-property: bottom right;
+    transition-duration: 1s;
+    transition-delay: 0.7s;
+}
+
+.box input:checked + .content .icon4{
+    bottom: 12rem;
+    right: 17rem;
+}
